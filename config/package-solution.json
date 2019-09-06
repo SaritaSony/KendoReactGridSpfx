@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "kendo-sp-fx-client-side-solution",
+    "id": "44065052-bfec-42dd-810a-a69a362ec43d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/kendo-sp-fx.sppkg"
+  }
+}

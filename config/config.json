@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "kendo-sp-fx-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/kendoSpFx/KendoSpFxWebPart.js",
+          "manifest": "./src/webparts/kendoSpFx/KendoSpFxWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "KendoSpFxWebPartStrings": "lib/webparts/kendoSpFx/loc/{locale}.js"
+  }
+}
