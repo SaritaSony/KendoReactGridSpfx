@@ -1,8 +1,10 @@
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
-
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
+
+import 'core-js/es7/map';
+import 'core-js/es6/array';
+import 'core-js/fn/string/includes';
+
 import { Version } from '@microsoft/sp-core-library';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 import {

@@ -1,6 +1,3 @@
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
-
 import * as React from 'react';
 import { IKendoSpFxProps } from './IKendoSpFxProps';
 import { IKendoSpFxState } from './IKendoSpFxState';
@@ -70,6 +67,14 @@ private headerSelectionChange = (event) => {
     this.forceUpdate();
 }
 
+public expandChange = (event) => {
+  event.dataItem[event.target.props.expandField] = event.value;
+  this.setState({
+          gridData: Object.assign({}, this.state.gridData),
+          dataState: this.state.dataState
+      });
+  }
+
   public render(): React.ReactElement<IKendoSpFxProps> {
 
     let MyCustomCell = (props) => <IconCell {...props} />;
@@ -86,6 +91,9 @@ private headerSelectionChange = (event) => {
               onSelectionChange={this.selectionChange}
               onHeaderSelectionChange={this.headerSelectionChange}
               onRowClick={this.rowClick}
+              groupable
+              onExpandChange={this.expandChange}
+              expandField="expanded"                                      
         >
           <GridColumn
             field="selected"
